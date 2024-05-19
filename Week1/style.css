@@ -37,6 +37,13 @@ details p {
 }
 
 @media screen and (max-width: 768px) {
+  .first-week {
+    margin-bottom: 0;
+  }
+  .first-project {
+    text-align: left;
+    margin-top: 1rem;
+  }
   .second-project {
     width: 100%;
     padding: 10px;
@@ -47,8 +54,5 @@ details p {
   }
   .details {
     padding: 10px;
-  }
-  .first-project {
-    text-align: left;
   }
 }
