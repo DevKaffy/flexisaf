@@ -117,19 +117,19 @@ const sumDigits = digits.reduce((acc, cur) => acc + cur, 0);
 console.log(sumDigits);
 
 // Shopping List
-let shoppingItems = [
-  "Milk",
-  "Milo",
-  "Sugar",
-  "Detergent",
-  "perfume",
-  "Toothpaste",
+let jsFeatures = [
+  "Scope",
+  "Let",
+  "Const",
+  "Arrow functions",
+  "Array",
+  "Objects",
 ];
-console.log(shoppingItems);
+console.log(jsFeatures);
 let list = document.getElementById("listEl");
-for (let i = 0; i < shoppingItems.length; i++) {
+for (let i = 0; i < jsFeatures.length; i++) {
   let li = document.createElement("li");
-  li.textContent = shoppingItems[i];
+  li.textContent = jsFeatures[i];
   list.appendChild(li);
 }
 
@@ -152,6 +152,11 @@ const dataArray = [
   },
   {
     title: "Why is Array important in JS?",
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic tempora rerum alias, facere aut nobis quasi voluptas non expedita soluta exercitationem officiis consequatur in enim ex natus repellat ipsum",
+  },
+  {
+    title: "Difference between let and const?",
     detail:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic tempora rerum alias, facere aut nobis quasi voluptas non expedita soluta exercitationem officiis consequatur in enim ex natus repellat ipsum",
   },
