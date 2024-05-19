@@ -1,39 +1,29 @@
-// W3SCHOOLS EXERCISE
+// let and const
+let carName = "Volvo";
+console.log(carName);
 
-// let carName = "Volvo";
-// console.log(carName);
+const x = 50;
+console.log(x);
 
-// let x = 50;
-// console.log(x);
+let a = 5;
+let b = 10;
+a = 30;
+b = 5;
+console.log(a + b);
 
-// let a = 5;
-// let b = 10;
-// console.log(a + b);
+const c = 5;
+const d = 10;
+const e = c + d;
+console.log(e);
 
-// let c = 5;
-// let d = 10;
-// let e = c + d;
-// // alert(e);
+let firstName = "John",
+  lastName = "Doe",
+  age = 35;
+console.log(firstName, lastName, age);
 
-// let firstName = "John",
-//   lastName = "Doe",
-//   age = 35;
-// console.log(firstName, lastName, age);
-
-// alert(10 * 5);
-// alert(10 / 5);
-// alert(15 % 9);
-
-x = 10;
-y = 5;
-console.log((x += y));
-console.log((x *= y));
-
-let length = 16;
-console.log(typeof x);
-
-let lasName = "Johnson";
-console.log(typeof lasName);
+console.log(10 * 5);
+console.log(10 / 5);
+console.log(15 % 9);
 
 const i = {
   firstName: "John",
@@ -41,44 +31,90 @@ const i = {
 };
 console.log(typeof i);
 
-function myFunction() {
-  alert("Hello World!");
-}
-myFunction();
-
-function myFunction() {
+// Regular function
+function theFunction() {
   return "Hello";
 }
+console.log(theFunction());
+
+// Arrow function
+const myFunction = () => "Hello";
 console.log(myFunction());
 
-// const person = {
-//   firstName: "John",
-//   lastName: "Doe",
-// };
-// console.log(person.firstName);
+// object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+console.log(person.firstName);
 
 // Create an object called person with name = John, age = 50.
-// Then, access the object to alert("John is 50").
-// const one = {
-//   name: "John",
-//   age: 50,
-// };
-// console(one.name + " is " + one.age);
+// Then, access the object to log out ("John is 50").
 
-// let txt = "Hello World!";
-// let z = txt.length;
-// console(z);
+const one = {
+  name: "John",
+  age: 50,
+};
+console.log(one.name + " is " + one.age);
 
-// let text = 'We are "Vikings"';
-// console.log(text);
+// forEach
+let sum = 0;
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((num) => console.log(num));
+console.log(sum);
+numbers.forEach((num) => (sum += num));
+console.log(sum);
 
-// let txit = "Hello World!";
-// txt = txt.toUpperCase();
-// console.log(txit);
+// map
+// Map the products array to its corresponding prices.
+const products = [
+  { product: "banana", price: 3 },
+  { product: "mango", price: 6 },
+  { product: "potato", price: " " },
+  { product: "avocado", price: 8 },
+  { product: "coffee", price: 10 },
+  { product: "tea", price: "" },
+];
+const productsPrice = products.map(
+  (product) => `${product.product}:${product.price}`
+);
+console.log(productsPrice);
 
-const taxt = "I can eat bananas all day";
-let hi = taxt.slice(10, 17);
-console.log(hi);
+// Change countries toUpperCase
+const countries = [
+  "Nigeria",
+  "Ghana",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Mexico",
+  "Japan",
+  "Kenya",
+];
+const countriesToUpperCase = countries.map((country) => country.toUpperCase());
+console.log(countriesToUpperCase);
+
+// filter
+const countriesContainingLand = countries.filter((country) =>
+  country.includes("land")
+);
+console.log(countriesContainingLand);
+
+const countriesEndsByia = countries.filter((country) => country.endsWith("ia"));
+console.log(countriesEndsByia);
+
+const countriesHaveFiveLetters = countries.filter(
+  (country) => country.length === 5
+);
+console.log(countriesHaveFiveLetters);
+
+// reduce
+const digits = [1, 2, 3, 4, 5];
+const sumDigits = digits.reduce((acc, cur) => acc + cur, 0);
+console.log(sumDigits);
 
 // Shopping List
 let shoppingItems = [
@@ -131,4 +167,4 @@ const makeHTML = (data) => {
 const faqContainer = document.querySelector(".faq-container");
 faqContainer.innerHTML = dataArray
   .map((dataItem) => makeHTML(dataItem))
-  .join(" ");
+  .join("");

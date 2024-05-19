@@ -37,11 +37,6 @@ details p {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    display: grid;
-    place-items: center;
-    text-align: center;
-  }
   .second-project {
     width: 100%;
     padding: 10px;
